@@ -1,3 +1,47 @@
+.headSection {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
 .title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--primary);
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.image {
+  width: 40%;
+}
+
+.image img {
+  object-fit: cover;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.image img:nth-child(1) {
+  top: 100px;
+  left: 50px;
+  z-index: 1;
+  border: 3px solid var(--primary);
+}
+
+.image img:nth-child(2) {
+  top: 250px;
+  left: 200px;
+  z-index: 2;
+  border: 3px solid var(--secondary);
+}
+
+.image img:nth-child(3) {
+  top: 10px;
+  left: 300px;
+  border: 3px solid var(--tertiary);
 }
