@@ -42,6 +42,35 @@
   transition: transform 200ms ease-in-out;
 }
 
+.stats {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.bar {
+  height: 1px;
+  background-color: var(--primary);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+.stats div:nth-child(2) {
+  background-color: var(--background);
+  border-radius: 10%;
+  padding: 5px 25px;
+  width: fit-content;
+  position: relative;
+}
+
+.stats p:nth-child(1) {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
 .ctaSection {
   margin: 3.5rem 0;
   text-align: center;

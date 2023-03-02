@@ -6,7 +6,7 @@ import image2 from '../assets/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg';
 import image3 from '../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg';
 import Link from 'next/link';
 
-import { Yeseva_One } from 'next/font/google'
+import { Poppins, Yeseva_One } from 'next/font/google'
 const yeseva = Yeseva_One({ weight: '400', subsets:['latin'] })
 
 export default function Home() {
@@ -54,6 +54,13 @@ export default function Home() {
         <section className={styles.ctaSection}>
           <p>Toutes les recettes sur le site sont <strong>entièrement végétariennes</strong>. Plus besoin de passer à la loupe tous les ingrédients d'une recette pour vous assurer de ne pas rater un aliment animal. Cuisinez tranquille !</p>
           <Link href="/recipes">Découvrir les recettes</Link>
+        </section>
+        <section className={styles.stats}>
+          <div className={styles.bar}></div>
+          <div>
+          <p className={yeseva.className}>142</p>
+          <p>recettes disponibles</p>
+          </div>
         </section>
       </main>
     </>
