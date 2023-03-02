@@ -1,13 +1,15 @@
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --background: #fefefe;
+  --text: #333;
   --primary: #4E6151;
   --secondary: #F7CB15;
   --tertiary: #F55D3E;
+  background-color: var(--background);
 }
 
 * {
