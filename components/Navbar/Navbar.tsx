@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
         <Link href="/">Accueil</Link>
-        <Link href="/blog">Recettes</Link>
-        <Link href="/blog">Recette au hasard</Link>
+        <Link href="/recipes">Recettes</Link>
+        <Link href="/recipes/random">Recette au hasard</Link>
     </nav>
   )
 }
