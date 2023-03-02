@@ -4,6 +4,7 @@ import Image from 'next/image';
 import image1 from '../assets/anna-pelzer-IGfIGP5ONV0-unsplash.jpg';
 import image2 from '../assets/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg';
 import image3 from '../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg';
+import Link from 'next/link';
 
 import { Yeseva_One } from 'next/font/google'
 const yeseva = Yeseva_One({ weight: '400', subsets:['latin'] })
@@ -20,7 +21,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
+      <main className={styles.main}>
         <section className={styles.headSection}>
           <div>
             <h1 className={`${styles.title} ${yeseva.className}`}><span className={styles.titleKeyword}>Veggiefest</span>, le site réservé aux recettes végétariennes</h1>
@@ -49,6 +50,10 @@ export default function Home() {
               />
             </div>
           </div>
+        </section>
+        <section className={styles.ctaSection}>
+          <p>Toutes les recettes sur le site sont <strong>entièrement végétariennes</strong>. Plus besoin de passer à la loupe tous les ingrédients d'une recette pour vous assurer de ne pas rater un aliment animal. Cuisinez tranquille !</p>
+          <Link href="/recipes">Découvrir les recettes</Link>
         </section>
       </main>
     </>

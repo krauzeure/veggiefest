@@ -1,8 +1,12 @@
+.main {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .headSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
 }
 
 .title {
@@ -36,4 +40,21 @@
 .image img:hover {
   transform: scale(1.03);
   transition: transform 200ms ease-in-out;
+}
+
+.ctaSection {
+  margin: 3.5rem 0;
+  text-align: center;
+}
+
+.ctaSection p {
+  margin-bottom: 50px;
+}
+
+.ctaSection a {
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 10px;
 }
