@@ -3,6 +3,13 @@
     margin: 0 auto;
 }
 
+.main ul {
+    padding-inline-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .title {
     font-size: 1.6em;
     font-weight: 400;
