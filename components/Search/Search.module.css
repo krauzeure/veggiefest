@@ -1,0 +1,12 @@
+.search {
+    display: flex;
+}
+
+.search fieldset {
+    border: none;
+    display: flex;
+}
+
+.search fieldset div {
+    margin-right: 10px;
+}
