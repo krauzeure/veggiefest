@@ -10,7 +10,7 @@ export default function Recipes({ recipes }: { recipes: [] }) {
       <h1 className={styles.title}>Recettes</h1>
       <ul>
         {recipes.map((item: recipe, index: number) => (
-          <Recipe key={index} name={item.name} image={item.image} />
+          <Recipe key={index} name={item.name} image={item.image} difficulty={item.difficulty} time={item.time} />
         ))}
       </ul>
     </main>

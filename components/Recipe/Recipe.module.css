@@ -3,19 +3,24 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(17, 12, 46, 0.05) 0px 48px 100px 0px;
-    width: 280px;
+    width: 250px;
+    height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px 0 20px;
     margin: 20px;
     transition: transform 200ms ease-in-out;
+    font-size: 0.9em;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .container:hover {
     transform: scale(1.1);
     transition: transform 200ms ease-in-out;
+}
+
+.container:hover .info {
+    transform: translateY(-120%);
 }
 
 .container img {
@@ -24,9 +29,21 @@
 }
 
 .container p {
-    font-size: 0.9em;
-    width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.info {
+    height: 75px;
+    width: 210px;
+    background-color: #fff;
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.difficulty {
+    margin: -10px 0 10px 0;
 }
