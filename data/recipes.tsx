@@ -1,7 +1,16 @@
-export const recipes: {name: string, image: string, difficulty: number, time: number, ingredients:{qty: string, name: string}[], steps:string[], recipeType: string}[] = [
+import Dahl from '../assets/114451_w2000h3128c1cx540cy844cxb1080cyb1689.webp'
+import Croque from '../assets/57252_w2000h3000c1cx2000cy3000.webp'
+import Gaufres from '../assets/10404_w1280h972c1cx1000cy1500cxb2000cyb3000.webp'
+import Tatin from '../assets/86217_w1280h972c1cx3050cy4137cxb4337cyb6500.webp'
+import Spaghetti from '../assets/61540_w1280h972c1cx1500cy996.webp'
+import Omelette from '../assets/125932_w1280h972c1cx954cy709cxb2121cyb1414.webp'
+
+import { StaticImageData } from 'next/image'
+
+export const recipes: {name: string, image: StaticImageData, difficulty: number, time: number, ingredients:{qty: string, name: string}[], steps:string[], recipeType: string}[] = [
   {
     name: "Dahl de lentilles corail",
-    image: "https://assets.afcdn.com/recipe/20200928/114451_w2000h3128c1cx540cy844cxb1080cyb1689.webp",
+    image: Dahl,
     difficulty: 1,
     time: 30,
     ingredients: [{qty: "30cl", name: "Lentilles corail"}, {qty: "5", name: "Tomates"}, {qty: "4", name: "Carottes"}, {qty: "1 càs", name: "Huile de tournesol"}, {qty: "1", name: "Gousse d'ail hachée"}, {qty: "1 càs", name: "Concentré de tomates"} ],
@@ -10,7 +19,7 @@ export const recipes: {name: string, image: string, difficulty: number, time: nu
   },
   {
     name: "Quiche façon croque-monsieur",
-    image: "https://assets.afcdn.com/recipe/20160729/57252_w2000h3000c1cx2000cy3000.webp",
+    image: Croque,
     difficulty: 1,
     time: 14,
     ingredients: [{qty: "2", name: "Carottes"}, {qty: "2", name: "Brocolis"}, {qty: "100g", name: "Chèvre sec"}, {qty: "3", name: "Oeufs"}, {qty: "20cl", name: "Crème liquide"}, {qty: "1 poignée", name: "Gruyère râpé"} ],
@@ -19,7 +28,7 @@ export const recipes: {name: string, image: string, difficulty: number, time: nu
   },
   {
     name: "Gaufres salées au pesto",
-    image: "https://assets.afcdn.com/recipe/20170104/10404_w1280h972c1cx1000cy1500cxb2000cyb3000.webp",
+    image: Gaufres,
     difficulty: 1,
     time: 30,
     ingredients: [{qty: "1 sachet", name: "Levure"}, {qty: "450g", name: "Farine"}, {qty: "3 càc", name: "Pesto"}, {qty: "75cl", name: "Lait"}, {qty: "3", name: "Oeufs"}],
@@ -28,7 +37,7 @@ export const recipes: {name: string, image: string, difficulty: number, time: nu
   },
   {
     name: "Tarte Tatin aux oignons rouges",
-    image: "https://assets.afcdn.com/recipe/20190117/86217_w1280h972c1cx3050cy4137cxb4337cyb6500.webp",
+    image: Tatin,
     difficulty: 1,
     time: 60,
     ingredients: [{qty: "250g", name: "Pâte brisée"}, {qty: "2 càs", name: "Vinaigre balsamique"}, {qty: "25g", name: "Beurre"}, {qty: "1 càs", name: "Huile d'olive"}, {qty: "1.5kg", name: "Oignon rouge"}],
@@ -37,7 +46,7 @@ export const recipes: {name: string, image: string, difficulty: number, time: nu
   },
   {
     name: "Spaghetti aux courgettes",
-    image: "https://assets.afcdn.com/recipe/20150730/61540_w1280h972c1cx1500cy996.webp",
+    image: Spaghetti,
     difficulty: 2,
     time: 35,
     ingredients: [{qty: "600g", name: "Courgettes"}, {qty: "1", name: "Oignon"}, {qty: "2 càs", name: "Huile d'olive"}, {qty: "500g", name: "Spaghettis"}, {qty: "150g", name: "Crème épaisse"}, {qty: "100g", name: "Parmesan"}],
@@ -46,7 +55,7 @@ export const recipes: {name: string, image: string, difficulty: number, time: nu
   },
   {
     name: "Omelette aux épinards et mozzarella",
-    image: "https://assets.afcdn.com/recipe/20211216/125932_w1280h972c1cx954cy709cxb2121cyb1414.webp",
+    image: Omelette,
     difficulty: 1,
     time: 15,
     ingredients: [{qty: "1", name: "Oignon"}, {qty: "4", name: "Oeufs"}, {qty: "250g", name: "Épinards en branche"}, {qty: "50g", name: "Mozzarella"}],
