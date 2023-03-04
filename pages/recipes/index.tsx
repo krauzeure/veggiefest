@@ -5,7 +5,7 @@ import Search from '@/components/Search/Search';
 
 import styles from './index.module.css';
 
-export default function Recipes({ recipes }: { recipes: [] }) {
+export default function Recipes({ recipes }: { recipes: recipe[] }) {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Recettes</h1>
