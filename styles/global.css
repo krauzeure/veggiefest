@@ -22,3 +22,13 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+.css-nnid7-MuiSlider-valueLabel {
+  top: 55px;
+  background-color: transparent;
+  color: var(--text);
+}
+
+.css-nnid7-MuiSlider-valueLabel::before {
+  display: none;
+}
