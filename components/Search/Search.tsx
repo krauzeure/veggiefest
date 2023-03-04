@@ -11,7 +11,6 @@ export default function Search() {
   const handleChange = (event: Event, newValue: number | number[]) => {
     setValue(newValue as number[]);
   };
-  console.log(value)
   return (
     <section className={styles.search} role='search'>
       <div className={styles.searchInputs}>
@@ -52,7 +51,7 @@ export default function Search() {
       <Box className={styles.time} sx={{ width: 300 }}>
         <p>Temps de recette : </p>
           <Slider
-            aria-label="Temps de recette"
+            getAriaLabel={() => 'Temps pour les recettes'}
             value={value}
             onChange={handleChange}
             min={1}
