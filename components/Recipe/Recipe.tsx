@@ -20,7 +20,7 @@ export default function Recipe(props: {
       <Image src={props.image} alt={props.name} width={250} height={150} />
       <div className={styles.info}>
       <p>{props.name}</p>
-        <div className={styles.difficulty}>Difficulté : {difficultyArr.map(item => (<Image src={item} alt="Difficulté" width={15} height={15} />))}</div>
+        <div className={styles.difficulty}>Difficulté : {difficultyArr.map((item, index) => (<Image src={item} alt="Difficulté" width={15} height={15} key={index} />))}</div>
       </div>
     </li>
   );
