@@ -14,7 +14,6 @@ export default function Recipe(props: {
     const totalDifficultyRating = 3;
     const difficultyArr = Array.from(Array(3))
     difficultyArr.fill(broccoliFilled, 0, props.difficulty).fill(broccoli, props.difficulty, totalDifficultyRating)
-    console.log(difficultyArr)
   return (
     <li className={styles.container}>
       <Image src={props.image} alt={props.name} width={250} height={150} />
