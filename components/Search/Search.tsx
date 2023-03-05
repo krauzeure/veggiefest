@@ -19,7 +19,7 @@ export default function Search() {
 
         <div>
           <input type='checkbox' id='entree' name='entree' />
-          <label htmlFor='entree'>Entrées</label>
+          <label htmlFor='entree'>Entrée</label>
         </div>
 
         <div>
@@ -58,6 +58,7 @@ export default function Search() {
             max={60}
             valueLabelDisplay="auto"
             sx={{color:"var(--primary)"}}
+            data-testid="time-slider"
           />
         </Box>
         </div>
