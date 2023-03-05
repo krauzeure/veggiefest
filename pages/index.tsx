@@ -58,7 +58,7 @@ export default function Home() {
         <section className={styles.stats}>
           <div className={styles.bar}></div>
           <div>
-          <p className={yeseva.className}>142</p>
+          <p className={yeseva.className} data-testid="recipes-count">142</p>
           <p>recettes disponibles</p>
           </div>
         </section>
