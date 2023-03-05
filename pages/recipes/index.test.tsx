@@ -40,9 +40,6 @@ describe('Recipes index', () => {
     const headerElement = screen.getByRole('heading', { level: 1 });
     expect(headerElement).toHaveTextContent('Recettes');
 
-    const searchButton = screen.getByRole("button")
-    expect(searchButton).toBeInTheDocument()
-
     const listContainer = screen.getByRole("list")
     expect(listContainer).toBeInTheDocument()
 
@@ -53,9 +50,19 @@ describe('Recipes index', () => {
   test("renders the correct number of recipes", () => {
     const listElements = screen.getAllByRole("listitem")
     expect(listElements.length).toEqual(1)
+  })
+
+  test("renders the correct number of images per recipes", () => {
+    const listElements = screen.getAllByRole("listitem")
+    expect(listElements.length).toEqual(1)
 
     const recipeImage = screen.getAllByRole("img")
-    expect(recipeImage.length).toEqual(4)
+    expect(recipeImage.length).toEqual(listElements.length * 4)
+  })
+
+  test("renders the search component", () => {
+    const searchElement = screen.getByRole("search")
+    expect(searchElement).toBeInTheDocument()
   })
 
 });
