@@ -76,7 +76,7 @@ export const recipes: {name: string, image: StaticImageData, difficulty: number,
     time: 4,
     ingredients: [{qty: "6", name: "Oeufs"}, {qty: "1", name: "Baguette"}],
     steps: ["Choisissez des oeufs extra frais et de taille similaire pour une cuisson homogène Sortez-les du réfrigérateur 1 heure avant de les cuire pour qu’ils soient à température ambiante", "Mettre de l'eau à chauffer Lorsque l'eau bout, plonger les oeufs dedans avec une cuillère et compter 3 minutes de cuisson avant de les sortir de l'eau", "Coupez la baguette en mouillettes", "Ouvrez le haut de l'oeuf, trempez les mouilettes et dégustez !"],
-    recipeType: "Entrée"
+    recipeType: "Entree"
   },
   {
     name: "Oeufs mimosa",
@@ -85,7 +85,7 @@ export const recipes: {name: string, image: StaticImageData, difficulty: number,
     time: 35,
     ingredients: [{qty: "4", name: "Oeufs"}, {qty: "1", name: "Baguette"}],
     steps: ["Faire cuire les oeufs 10 mn dans l'eau bouillante, puis les mettre dans l'eau froide pour arrêter la cuisson.", "Ecaler les oeufs, les couper dans le sens de la longueur, puis séparer les blancs des jaunes.", "Dans une assiette creuse, émietter les jaunes à la fourchette, mélanger la moitié de ces jaunes émiettés avec de la mayonnaise et réserver le reste.", "Remplir les demi-blancs de cette préparation, puis saupoudrer chaque demi-oeuf du reste de jaunes émiettés."],
-    recipeType: "Entrée"
+    recipeType: "Entree"
   },
   {
     name: "Soufflé au fromage",
@@ -94,7 +94,7 @@ export const recipes: {name: string, image: StaticImageData, difficulty: number,
     time: 50,
     ingredients: [{qty: "150g", name: "Emmental rapé"}, {qty: "60g", name: "Beurre"}, {qty: "60g", name: "Farine"}, {qty: "4", name: "Oeufs"}, {qty: "40cl", name: "Lait"}],
     steps: ["Préchauffer le four à 180°C (thermostat 6). Beurrer le moule.", "Chauffer le beurre dans une casserole, ajouter la farine et remuer rapidement pendant 1 min. Ajouter le lait tiédi, remuer au fouet pendant quelques minutes à feu doux.", "Retirer la casserole du feu.", "Séparer les blancs et les battre fermement (avec une pincée de sel).", "Dans la casserole refroidie, ajouter les jaunes d'oeufs un à un, puis le fromage râpé.", "Incorporer les blancs d'oeufs battus en mélangeant délicatement.", "Verser dans le moule, au maximum jusqu'à 4 cm du bord.", "Enfourner pendant 35 minutes en position chaleur tournante."],
-    recipeType: "Entrée"
+    recipeType: "Entree"
   },
   {
     name: "Tarte à l'oignon rapide",
