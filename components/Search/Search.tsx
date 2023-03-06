@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Poppins } from 'next/font/google';
 const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
-export default function Search(props: { applyFilters: () => void }) {
+export default function Search(props: { applyFilters: (timeFilter: number[], difficultyFilter: string[], dishFilter: string[]) => void }) {
 
   const [timeFilter, setTimeFilter] = useState<number[]>([1, 60]);
   const [difficultyFilter, setDifficultyFilter] = useState<string[]>([]);
@@ -42,7 +42,7 @@ export default function Search(props: { applyFilters: () => void }) {
   };
 
   const applyFilters = () => {
-    props.applyFilters()
+    props.applyFilters(timeFilter, difficultyFilter, dishFilter)
   }
 
   return (
