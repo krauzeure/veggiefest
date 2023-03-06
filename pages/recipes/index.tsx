@@ -11,10 +11,14 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
   const [recipesList, setRecipesList] = useState<recipe[]>([])
   const [isFiltered, setIsFiltered] = useState<boolean>(false)
 
+  const handleFilters = () => {
+    console.log("Test")
+  }
+
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Recettes</h1>
-      <Search />
+      <Search applyFilters={handleFilters}/>
       <ul>
         {!isFiltered ? recipes.map((item: recipe, index: number) => (
           <Recipe

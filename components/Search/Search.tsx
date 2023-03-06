@@ -41,6 +41,10 @@ export default function Search(props: { applyFilters: () => void }) {
     setTimeFilter(newValue as number[]);
   };
 
+  const applyFilters = () => {
+    props.applyFilters()
+  }
+
   return (
     <section className={styles.search} role='search'>
       <div className={styles.searchInputs}>
@@ -123,7 +127,7 @@ export default function Search(props: { applyFilters: () => void }) {
         </Box>
       </div>
       <div className={styles.searchButton}>
-        <button className={poppins.className}>Rechercher</button>
+        <button className={poppins.className} onClick={applyFilters}>Rechercher</button>
       </div>
     </section>
   );
