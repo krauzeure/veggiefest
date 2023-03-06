@@ -4,7 +4,8 @@ import Search from './Search';
 describe("Search component", () => {
 
     beforeEach(() => {
-        render(<Search />)
+        const mockFunc = jest.fn()
+        render(<Search applyFilters={mockFunc}/>)
     })
 
     test("renders the component correctly", () => {
