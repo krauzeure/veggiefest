@@ -2,16 +2,21 @@ import React from 'react';
 import { recipe } from 'types/types';
 import Recipe from '@/components/Recipe/Recipe';
 import Search from '@/components/Search/Search';
+import { useState, useEffect } from 'react';
 
 import styles from './index.module.css';
 
 export default function Recipes({ recipes }: { recipes: recipe[] }) {
+
+  const [recipesList, setRecipesList] = useState<recipe[]>([])
+  const [isFiltered, setIsFiltered] = useState<boolean>(false)
+
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Recettes</h1>
       <Search />
       <ul>
-        {recipes.map((item: recipe, index: number) => (
+        {!isFiltered ? recipes.map((item: recipe, index: number) => (
           <Recipe
             key={index}
             name={item.name}
@@ -19,7 +24,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
             difficulty={item.difficulty}
             time={item.time}
           />
-        ))}
+        )): null}
       </ul>
     </main>
   );
