@@ -10,10 +10,47 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
 
   const [recipesList, setRecipesList] = useState<recipe[]>([])
   const [isFiltered, setIsFiltered] = useState<boolean>(false)
+  const [filteredURL, setFilteredURL] = useState<string>("")
 
-  const handleFilters = () => {
-    console.log("Test")
+  const handleFilters = (timeFilter: number[], difficultyFilter: string[], dishFilter: string[]) => {
+    let timeFilters:string = ""
+    let difficultyFilters:string = ""
+    let dishFilters:string = ""
+
+    if(timeFilter[0] > 1 || timeFilter[1] < 60) {
+      timeFilters = `time=${timeFilter[0]}-${timeFilter[1]}`
+    }
+
+    if(difficultyFilter.length === 1) {
+      difficultyFilters = `&difficulty=${difficultyFilter[0]}`
+    } else if(difficultyFilter.length === 2) {
+      difficultyFilters = `&difficulty=${difficultyFilter[0]},${difficultyFilter[1]}`
+    }
+
+    if(dishFilter.length === 1) {
+      dishFilters = `&dishes=${dishFilter[0]}`
+    } else if(dishFilter.length === 2) {
+      dishFilters = `&dishes=${dishFilter[0]},${dishFilter[1]}`
+    }
+    setFilteredURL(`http://localhost:3000/api/allRecipes?${timeFilters}${difficultyFilters}${dishFilters}`)
   }
+
+  useEffect(() => {
+    if(filteredURL != "") {
+      fetch(filteredURL)
+      .then(function(res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function(response) {
+        setRecipesList(response)
+        setIsFiltered(true)
+      });
+    }
+  }, [filteredURL])
+
+  console.log(recipesList)
 
   return (
     <main className={styles.main}>
