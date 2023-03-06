@@ -15,3 +15,7 @@
     font-weight: 400;
     color: var(--primary);
 }
+
+.emptyState {
+    text-align: center;
+}

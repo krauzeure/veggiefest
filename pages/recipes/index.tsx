@@ -60,7 +60,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
       <h1 className={styles.title}>Recettes</h1>
       <Search applyFilters={handleFilters}/>
       <ul>
-        {arrToMap.map((item: recipe, index: number) => (
+        {isLoading ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div> : arrToMap.map((item: recipe, index: number) => (
           <Recipe
             key={index}
             name={item.name}
@@ -70,6 +70,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
           />
         ))}
       </ul>
+      {!isLoading && isFiltered && arrToMap.length === 0 ? <p className={styles.emptyState}>Nous n'avons malheureusement pas de recette correspondant à ces critères 😔<br /> Essayez de modifier vos critères pour découvrir d'autres recettes !</p> : null}
     </main>
   );
 }
