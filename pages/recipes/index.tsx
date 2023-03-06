@@ -11,6 +11,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
   const [recipesList, setRecipesList] = useState<recipe[]>([])
   const [isFiltered, setIsFiltered] = useState<boolean>(false)
   const [filteredURL, setFilteredURL] = useState<string>("")
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const handleFilters = (timeFilter: number[], difficultyFilter: string[], dishFilter: string[]) => {
     let timeFilters:string = ""
@@ -37,6 +38,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
 
   useEffect(() => {
     if(filteredURL != "") {
+      setIsLoading(true)
       fetch(filteredURL)
       .then(function(res) {
         if (res.ok) {
@@ -44,20 +46,21 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
         }
       })
       .then(function(response) {
-        setRecipesList(response)
+        setRecipesList(response.recipes)
+        setIsLoading(false)
         setIsFiltered(true)
       });
     }
   }, [filteredURL])
 
-  console.log(recipesList)
+  const arrToMap = isFiltered ? recipesList : recipes
 
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Recettes</h1>
       <Search applyFilters={handleFilters}/>
       <ul>
-        {!isFiltered ? recipes.map((item: recipe, index: number) => (
+        {arrToMap.map((item: recipe, index: number) => (
           <Recipe
             key={index}
             name={item.name}
@@ -65,7 +68,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
             difficulty={item.difficulty}
             time={item.time}
           />
-        )): null}
+        ))}
       </ul>
     </main>
   );
