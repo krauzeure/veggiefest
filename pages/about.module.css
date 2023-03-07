@@ -1,0 +1,23 @@
+.main {
+    width: 70%;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.main h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+}
+
+.main a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.resources {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
