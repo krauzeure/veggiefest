@@ -67,7 +67,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
             image={item.image}
             difficulty={item.difficulty}
             time={item.time}
-            id={index}
+            id={item.id}
           />
         ))}
       </ul>

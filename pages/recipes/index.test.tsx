@@ -29,6 +29,7 @@ describe('Recipes index', () => {
                     'Enfin, ajouter les lentilles et bien remuer le tout.',
                   ],
                   recipeType: 'Plat',
+                  id: 1
                 },
               ]}
             />

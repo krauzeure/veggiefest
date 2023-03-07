@@ -7,5 +7,6 @@ export interface recipe {
     time: number,
     ingredients: {qty: string, name: string}[],
     steps: string[],
-    recipeType: string
+    recipeType: string,
+    id: number
   }
