@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Home from '.';
+import Dahl from '../assets/114451_w2000h3128c1cx540cy844cxb1080cyb1689.webp'
 
 describe("Homepage", () => {
 
     beforeEach(() => {
-        render(<Home />)
+        render(<Home recipesCount={1}
+          />)
     })
 
     test("renders correctly", () => {
