@@ -2,8 +2,8 @@
     width: 100%;
     padding: 35px;
     background-color: #FFF;
-    box-shadow: rgba(17, 12, 46, 0.05) 0px 48px 100px 0px;
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .searchInputs {
