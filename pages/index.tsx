@@ -5,11 +5,13 @@ import image1 from '../assets/anna-pelzer-IGfIGP5ONV0-unsplash.jpg';
 import image2 from '../assets/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg';
 import image3 from '../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg';
 import Link from 'next/link';
+import { recipe } from 'types/types';
 
 import { Poppins, Yeseva_One } from 'next/font/google'
 const yeseva = Yeseva_One({ weight: '400', subsets:['latin'] })
 
-export default function Home() {
+export default function Home({recipesCount}: { recipesCount: number }) {
+
   return (
     <>
       <Head>
@@ -58,11 +60,22 @@ export default function Home() {
         <section className={styles.stats}>
           <div className={styles.bar}></div>
           <div>
-          <p className={yeseva.className} data-testid="recipes-count">142</p>
+          <p className={yeseva.className} data-testid="recipes-count">{recipesCount}</p>
           <p>recettes disponibles</p>
           </div>
         </section>
       </main>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const data = await fetch("http://localhost:3000/api/recipesCount")
+  const result = await data.json()
+  const recipesCount = result.count
+  return {
+    props: {
+      recipesCount
+    }
+  }
 }
