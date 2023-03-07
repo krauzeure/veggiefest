@@ -98,7 +98,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
 }
 
 export async function getServerSideProps() {
-  const data = await fetch('http://localhost:3000/api/allRecipes');
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_PATH}/api/allRecipes`);
   const result = await data.json();
   const recipes = result.recipes;
 
