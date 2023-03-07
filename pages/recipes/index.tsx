@@ -1,6 +1,6 @@
 import React from 'react';
 import { recipe } from 'types/types';
-import Recipe from '@/components/Recipe/Recipe';
+import RecipeCard from '@/components/RecipeCard/RecipeCard';
 import Search from '@/components/Search/Search';
 import { useState, useEffect } from 'react';
 
@@ -61,7 +61,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
       <Search applyFilters={handleFilters}/>
       <ul>
         {isLoading ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div> : arrToMap.map((item: recipe, index: number) => (
-          <Recipe
+          <RecipeCard
             key={index}
             name={item.name}
             image={item.image}
