@@ -1,0 +1,33 @@
+.image {
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.recipeInfo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.recipeInfo div {
+    background-color: var(--primary);
+    color: var(--background);
+    margin: 0 10px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.recipeInfo p {
+    margin: 0;
+}
