@@ -19,15 +19,15 @@ export default function Recipe(props: {recipe: recipe}) {
         <section className={styles.recipe}>
         <div className={styles.ingredients}><h2>Ingrédients</h2>
         <ul>
-            {props.recipe.ingredients.map(item => (
-                <li>{item.name}, {item.qty}</li>
+            {props.recipe.ingredients.map((item, index) => (
+                <li key={`${index}-${item}`}>{item.name}, {item.qty}</li>
             ))}
         </ul></div>
 
         <div className={styles.steps}><h2>Étapes</h2>
         <ol>
-            {props.recipe.steps.map(item => (
-                <li>{item}</li>
+            {props.recipe.steps.map((item, index) => (
+                <li key={`${index}-${item}`}>{item}</li>
             ))}
         </ol></div>
         </section>
