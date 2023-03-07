@@ -9,9 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const dishFilters = req.query.dishes as string
     let filteredRecipes: recipe[];
     if(req.query.difficulty) {
-        let difficultyFilterString = difficultyFilters.replace('facile', '1').replace('moyen', '2').replace('difficile', '3')
-        let difficultyFilterArr = difficultyFilterString.split(",")
-        filteredRecipes = recipes.filter(el => el.difficulty === Number(difficultyFilterArr[0]) || el.difficulty === Number(difficultyFilterArr[1]))
+        // let difficultyFilterString = difficultyFilters.replace('facile', '1').replace('moyen', '2').replace('difficile', '3')
+        let difficultyFilterArr = difficultyFilters.split(",")
+        filteredRecipes = recipes.filter(el => el.difficulty === difficultyFilterArr[0] || el.difficulty === difficultyFilterArr[1])
     } else {
         filteredRecipes = recipes
     }
