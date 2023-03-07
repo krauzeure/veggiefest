@@ -37,7 +37,7 @@ export default function Recipes({ recipes }: { recipes: recipe[] }) {
       dishFilters = `&dishes=${dishFilter[0]},${dishFilter[1]}`;
     }
     setFilteredURL(
-      `http://localhost:3000/api/allRecipes?${timeFilters}${difficultyFilters}${dishFilters}`
+      `${process.env.NEXT_PUBLIC_API_BASE_PATH}/api/allRecipes?${timeFilters}${difficultyFilters}${dishFilters}`
     );
   };
 
