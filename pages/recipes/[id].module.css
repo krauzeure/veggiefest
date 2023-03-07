@@ -13,11 +13,12 @@
     display: flex;
     justify-content: center;
     margin: 20px;
+    text-transform: capitalize;
 }
 
 .recipeInfo div {
-    background-color: var(--primary);
-    color: var(--background);
+    background-color: #fff;
+    color: var(--text);
     margin: 0 10px;
     width: 150px;
     border-radius: 10px;
