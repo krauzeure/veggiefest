@@ -1,60 +1,66 @@
-.container {
-  list-style-type: none;
-  background-color: #fff;
-  border-radius: 10px;
-  width: 250px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  transition: transform 200ms ease-in-out;
-  font-size: 0.9em;
-  overflow: hidden;
-  cursor: pointer;
+.image {
+    object-fit: cover;
+    border-radius: 50px;
 }
 
-.container a {
-  text-decoration: none;
-  color: var(--text);
+.title {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--primary);
 }
 
-.container:hover {
-  transform: scale(1.1);
-  transition: transform 200ms ease-in-out;
+.recipeInfo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-transform: capitalize;
 }
 
-.container:hover .info {
-  transform: translateY(-130%);
+.recipeInfo div {
+    background-color: #fff;
+    color: var(--text);
+    margin: 0 10px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.container img {
-  object-fit: cover;
-  border-radius: 10px;
+.recipeInfo p {
+    margin: 0;
 }
 
-.info {
-  height: 75px;
-  width: 210px;
-  background-color: #fff;
-  opacity: 0.85;
-  border-radius: 10px;
-  padding: 0 10px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.recipe {
+    display: flex;
+    width: 60%;
 }
 
-.info p {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.recipe h2 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.difficulty {
-  margin: -10px 0 10px 0;
-  text-transform: capitalize;
-  font-size: 0.8em;
+.ingredients {
+    width: 30%;
 }
+
+.ingredients ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.steps {
+    width: 70%;
+}
+
+.steps ol {
+    padding-inline-start: 0;
+}
+
+.steps li {
+    margin: 10px 0;
+}
+
