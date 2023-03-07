@@ -11,7 +11,7 @@ describe('Recipes index', () => {
                 {
                   name: 'Dahl de lentilles corail',
                   image: Dahl,
-                  difficulty: 1,
+                  difficulty: "facile",
                   time: 30,
                   ingredients: [
                     { qty: '30cl', name: 'Lentilles corail' },
