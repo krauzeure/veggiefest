@@ -10,5 +10,5 @@ export default async function handler(
   let randomRecipe: recipe[] = recipes.filter(
     (el, index) => index === randomNumber
   );
-  res.status(200).json({ recipe: randomRecipe[0], randomNumber: randomNumber });
+  res.status(200).json({ recipe: randomRecipe[0] });
 }
