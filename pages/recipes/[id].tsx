@@ -17,6 +17,21 @@ export default function oneRecipe({recipe}: {recipe: recipe}) {
             <div><p>{recipe.ingredients.length}</p>
             <p>ingrédients</p></div>
         </section>
+        <section className={styles.recipe}>
+        <div className={styles.ingredients}><h2>Ingrédients</h2>
+        <ul>
+            {recipe.ingredients.map(item => (
+                <li>{item.name}, {item.qty}</li>
+            ))}
+        </ul></div>
+
+        <div className={styles.steps}><h2>Étapes</h2>
+        <ol>
+            {recipe.steps.map(item => (
+                <li>{item}</li>
+            ))}
+        </ol></div>
+        </section>
     </main>
   )
 }
