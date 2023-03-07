@@ -1,11 +1,10 @@
 import React from 'react'
 import { recipe } from 'types/types'
+import Recipe from '@/components/Recipe/Recipe'
 
-export default function randomRecipe({recipe, randomNumber}: {recipe: recipe, randomNumber: number}) {
-  console.log(randomNumber)
-  console.log(recipe)
+export default function randomRecipe({recipe}: {recipe: recipe}) {
   return (
-    <div>mh</div>
+    <Recipe recipe={recipe} />
   )
 }
 
@@ -14,8 +13,7 @@ export async function getServerSideProps() {
     const result = await data.json()
     return {
         props: {
-            recipe: result.recipe,
-            randomNumber: result.randomNumber
+            recipe: result.recipe
         }
     }
 }
