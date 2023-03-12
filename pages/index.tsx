@@ -34,22 +34,22 @@ export default function Home({ recipesCount }: { recipesCount: number }) {
               <Image
                 src={image1}
                 alt='Image de nourriture'
-                width={400}
-                height={400}
+                // width={400}
+                // height={300}
               />
             </div>
             <div>
               <Image
                 src={image2}
                 alt='Image de nourriture'
-                width={200}
-                height={200}
+                // width={200}
+                // height={200}
               />
               <Image
                 src={image3}
                 alt='Image de nourriture'
-                width={150}
-                height={150}
+                // width={150}
+                // height={150}
               />
             </div>
           </div>
