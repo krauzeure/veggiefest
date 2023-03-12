@@ -7,7 +7,7 @@ export default function Recipe(props: {recipe: recipe}) {
   return (
     <main>
         <Image className={styles.image} src={props.recipe.image} alt={props.recipe.name} 
-        // width={800} height={400}
+        sizes="(max-width: 1500px) 90vw"
         />
         <h1 className={styles.title}>{props.recipe.name}</h1>
         <section className={styles.recipeInfo}>
