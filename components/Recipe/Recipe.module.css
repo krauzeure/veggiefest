@@ -1,6 +1,8 @@
 .image {
     object-fit: cover;
     border-radius: 50px;
+    width: 90%;
+    height: 400px;
 }
 
 .title {
@@ -62,3 +64,21 @@
     margin: 10px 0;
 }
 
+@media screen and (max-width: 750px) {
+
+    .recipe {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .ingredients {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .steps {
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+  }

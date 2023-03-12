@@ -18,3 +18,12 @@
 .emptyState {
     text-align: center;
 }
+
+@media screen and (max-width: 750px) {
+
+    .main {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+  }
