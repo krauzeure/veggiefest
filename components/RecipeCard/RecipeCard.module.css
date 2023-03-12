@@ -58,3 +58,20 @@
   text-transform: capitalize;
   font-size: 0.8em;
 }
+
+@media screen and (max-width: 750px) {
+
+  .container {
+    width: 180px;
+    height: 110px;
+  }
+
+  .info {
+    width: 140px;
+  }
+
+  .container:hover .info {
+    transform: translateY(-180%);
+  }
+
+}

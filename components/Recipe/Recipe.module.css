@@ -1,10 +1,14 @@
 .image {
     object-fit: cover;
     border-radius: 50px;
+    width: 90%;
+    height: 400px;
 }
 
 .title {
     color: var(--primary);
+    width: 100%;
+    text-align: center;
 }
 
 .recipeInfo {
@@ -12,13 +16,14 @@
     justify-content: center;
     margin: 20px;
     text-transform: capitalize;
+    width: 80%;
 }
 
 .recipeInfo div {
     background-color: #fff;
     color: var(--text);
     margin: 0 10px;
-    width: 150px;
+    width: 30%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -62,3 +67,34 @@
     margin: 10px 0;
 }
 
+@media screen and (max-width: 750px) {
+
+    .recipe {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .recipeInfo {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .recipeInfo div {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        min-height: 90px;
+    }
+
+    .ingredients {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .steps {
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+  }

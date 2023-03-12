@@ -14,7 +14,7 @@ export default function oneRecipe({ recipe }: { recipe: recipe }) {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Recipe recipe={recipe} />;
+      <Recipe recipe={recipe} />
     </>
   )
 }
