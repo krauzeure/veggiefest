@@ -6,7 +6,9 @@ import { recipe } from 'types/types';
 export default function Recipe(props: {recipe: recipe}) {
   return (
     <main>
-        <Image className={styles.image} src={props.recipe.image} alt={props.recipe.name} width={800} height={400}/>
+        <Image className={styles.image} src={props.recipe.image} alt={props.recipe.name} 
+        sizes="(max-width: 1500px) 90vw"
+        />
         <h1 className={styles.title}>{props.recipe.name}</h1>
         <section className={styles.recipeInfo}>
             <div><p>{props.recipe.difficulty}</p>
