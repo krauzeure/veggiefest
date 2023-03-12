@@ -7,6 +7,8 @@
 
 .title {
     color: var(--primary);
+    width: 100%;
+    text-align: center;
 }
 
 .recipeInfo {
@@ -14,19 +16,21 @@
     justify-content: center;
     margin: 20px;
     text-transform: capitalize;
+    width: 80%;
 }
 
 .recipeInfo div {
     background-color: #fff;
     color: var(--text);
     margin: 0 10px;
-    width: 150px;
+    width: 30%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    overflow: hidden;
 }
 
 .recipeInfo p {
