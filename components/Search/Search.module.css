@@ -27,6 +27,10 @@
     margin-bottom: 10px;
 }
 
+.time {
+    width: 30%;
+}
+
 .time p {
     margin: 0 0 10px 0;
 }
@@ -56,5 +60,9 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .time {
+        width: 100%;
+    }    
   
   }

@@ -30,7 +30,6 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    overflow: hidden;
 }
 
 .recipeInfo p {
@@ -73,6 +72,19 @@
     .recipe {
         flex-direction: column;
         width: 90%;
+    }
+
+    .recipeInfo {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .recipeInfo div {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        min-height: 90px;
     }
 
     .ingredients {
