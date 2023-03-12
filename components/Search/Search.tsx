@@ -112,7 +112,7 @@ export default function Search(props: { applyFilters: (timeFilter: number[], dif
             <label htmlFor='hard'>Difficile</label>
           </div>
         </fieldset>
-        <Box className={styles.time} sx={{ width: 300 }}>
+        <Box className={styles.time} >
           <p>Temps de recette : </p>
           <Slider
             getAriaLabel={() => 'Temps pour les recettes'}
